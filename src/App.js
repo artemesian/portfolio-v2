@@ -3,38 +3,50 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+
+import Navbar from "./components/navbar/navbar.component";
+import Home from "./container/home/home.component";
+import AboutMe from "./container/aboutMe/aboutMe.component";
+import Contact from "./container/contact/contact.component";
+import Blog from "./container/blog/blog.component";
+import Portfolio from "./container/portfolio/portfolio.component";
+import Post from "./components/post/post.component";
+import Project from "./components/project/project.component";
+import Page404 from "./components/page404/page404.component";
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <Navbar/>
       <Switch>
         <Route path="/" exact>
-          Home
+          <Home/>
         </Route>
         <Route path="/about">
-          About me
+          <AboutMe/>
         </Route>
         <Route path="/contact">
-          Contact
+          <Contact/>
         </Route>
         <Route path="/portfolio">
-          Projects List
+          <Portfolio/>
         </Route>
         <Route path="/portfolio/dev">
-          Projects Dev
+          <Project/>
         </Route>
         <Route path="/portfolio/design">
-          Projects Design
+          <Project/>
         </Route>
         <Route path="/blog">
-          Blog Homepage
+          <Blog/>
         </Route>
         <Route path="/blog/post">
-          Blog Article
+          <Post/>
         </Route>
         <Route path="*">
-          No Match
+          <Page404/>
         </Route>
       </Switch>
     </div>
