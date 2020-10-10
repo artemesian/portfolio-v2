@@ -22,7 +22,7 @@ function App() {
       <Navbar/>
       <Switch>
         <Route path="/" exact>
-          <Home/>
+          {/* <Home/> */}
         </Route>
         <Route path="/about">
           <AboutMe/>
@@ -30,7 +30,7 @@ function App() {
         <Route path="/contact">
           <Contact/>
         </Route>
-        <Route path="/portfolio">
+        <Route path="/portfolio" exact>
           <Portfolio/>
         </Route>
         <Route path="/portfolio/dev">
@@ -39,7 +39,7 @@ function App() {
         <Route path="/portfolio/design">
           <Project/>
         </Route>
-        <Route path="/blog">
+        <Route path="/blog" exact>
           <Blog/>
         </Route>
         <Route path="/blog/post">
